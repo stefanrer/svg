@@ -4,8 +4,26 @@
 </head>
 <body>
 <svg width="1000" height="800">
-<rect  width="1000" height="800" style="fill:rgb(0, 184, 217);" />
-<circle cx="920" cy="75" r="50" stroke="black" stroke-width="3" fill="yellow" />
+<rect  width="1000" height="800" style="fill:rgb(0, 184, 217);" id="c2"/>
+<animate 
+           xlink:href="#c2"
+           attributeName="fill"
+           values="rgb(0 , 184 , 217); black; rgb(0 , 184 , 217)"
+           dur="16s" 
+           repeatCount="indefinite" />
+<circle cx="20" cy="75" r="50"  fill="yellow" id="c1"/>
+<animate 
+           xlink:href="#c1"
+           attributeName="cx"
+           values="-100; 1100;"
+           dur="8s"
+           repeatCount="indefinite" />
+<animate 
+           xlink:href="#c1"
+           attributeName="fill"
+           values="yellow; white; yellow"
+           dur="16s"
+           repeatCount="indefinite" />
 <defs>
 <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
         <stop class="stop1" offset="0%"/>
